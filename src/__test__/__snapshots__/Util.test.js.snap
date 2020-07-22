@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parseMarkupText() unit test should process link markup into proper <a href> 1`] = `
+<p>
+  This is a 
+  <a
+    href="www.test.com"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    test
+  </a>
+  
+</p>
+`;
+
+exports[`parseMarkupText() unit test should process multiple markup types into proper elements 1`] = `
+<p>
+  Hello world!
+  <br />
+  
+  <br />
+  This 
+  <b>
+    is
+  </b>
+   
+  <em>
+    a
+  </em>
+   
+  <a
+    href="www.test.com"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    test
+  </a>
+  .
+</p>
+`;
+
+exports[`parseMarkupText() unit test should replace adjacent new lines with multiple <br />'s 1`] = `
+<p>
+  Hello
+  <br />
+  
+  <br />
+  
+  <br />
+  world
+</p>
+`;
+
+exports[`parseMarkupText() unit test should replace new lines with <br />'s 1`] = `
+<p>
+  Hello
+  <br />
+  world
+</p>
+`;
+
+exports[`parseMarkupText() unit test should wrap bold markup in <b> 1`] = `
+<p>
+  This 
+  <b>
+    is
+  </b>
+   a test
+</p>
+`;
+
+exports[`parseMarkupText() unit test should wrap italics markup in <em> 1`] = `
+<p>
+  This is 
+  <em>
+    a
+  </em>
+   test
+</p>
+`;
